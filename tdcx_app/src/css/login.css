@@ -1,0 +1,42 @@
+.login_container{
+   
+} 
+
+.container {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    width: 300px;
+    height: 250px;
+    padding: 25px;
+    
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+
+}
+.login_title {
+    text-align: left;
+    font: normal normal medium 20px/24px Montserrat;
+    letter-spacing: 0px;
+    color: #537178;
+}
+.email_value, .password_value {
+    width: 250px;
+    height: 35px;
+    margin-bottom: 10px;
+    background: #EEF1F8 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    border: none;
+}
+.login_btn {
+    width: 250px;
+    height: 35px;
+    border-radius: 8px;
+}
+

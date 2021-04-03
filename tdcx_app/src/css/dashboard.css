@@ -1,0 +1,76 @@
+.top_Nav  {
+    width: 100%;
+    height: 72px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    display: inline-block;
+     margin-bottom: 20px;
+}
+
+.avthar_img {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    width: 48px;
+    height: 48px;
+}
+.nav_text{
+    margin: 15px;
+    font-size: 20px !important;
+    color: #6D8187;
+}
+.name {
+    text-align: left;
+    position: absolute;
+    margin-left: 90px;
+}
+
+.logout {
+   float: right;
+}
+
+.new_task {
+    height: 160px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+.new_task p {
+        font-size: x-large;
+        font-weight: 500;
+        letter-spacing: 0px;
+        color: #537178;
+}
+.newtask_btn {
+    width: 100%;
+}
+
+.top_cards {
+    margin: 5px;
+}
+
+.search {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+    background: #D9DFEB;
+    border-radius: 8px;
+    border: none;
+}
+
+.topcardname {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    height: 35px;
+    margin-bottom: 12px;
+}
+
+.listoftasks {
+    display: inline-flex;
+    width: 100%;
+}
+
+.listoftasks button {
+   text-decoration: none;
+}
