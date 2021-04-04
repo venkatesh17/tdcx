@@ -16,7 +16,7 @@ global.connectedMongoEmitter = new eventEmitter();
 
 
 global.connectedMongoEmitter = new eventEmitter();
-global.db = mongoose.createConnection('mongodb+srv://venkatesh:YP@venky17@cluster0-86ec4.mongodb.net/tdcx?retryWrites=true&w=majority', { useNewUrlParser: true })
+global.db = mongoose.createConnection('mongodb+srv://venkatesh:YP@venky17@cluster0-86ec4.mongodb.net/tdcx?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 db.once('open', () => { 
    connectedMongoEmitter.emit('connectedMongoDB')

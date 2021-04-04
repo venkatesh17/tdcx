@@ -1,12 +1,16 @@
 import React, { useEffect, useState} from "react";
+import {useHistory } from "react-router-dom";
 import axios from 'axios'
 import '../css/login.css'
+
 
 function Login() {
 
     const [login, setLogin] = useState({})
+    let history = useHistory();
 
     const [data, setLoginData] = useState({username:"", password:""})
+
 
     // useEffect(() => {
     //     fetch('http://localhost:5000/v1/myapp/login', data)
@@ -25,16 +29,29 @@ function Login() {
         setLoginData({...data, password:e.target.value})
       }
 
-      const onLogin =()=>{
-        let result = axios.post('http://localhost:5000/v1/myapp/login', data)
-        .then((response) => response.json())
-        .then((data) => 
-            console.log("------sdsa------", data)
-        )
-        .catch((error) => console.log(error.message));
+      const onLogin = async ()=>{
+
+        const config = {
+          url:'http://localhost:5000/v1/myapp/login',
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          data: data
+      };
+
+
+        let result = await axios(config)
+        if(result.data.success == true){
+          localStorage.setItem('username', data.username)
+          localStorage.setItem('password', data.password)
+          history.push('/dashboard')
+        }else{
+          alert("Please enter correct credentials....!")
+        }
+  
+    
       }
 
-      console.log("----fsdfds-----", data);
+    
       
     return(
     <>

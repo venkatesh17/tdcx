@@ -10,21 +10,20 @@ module.exports = async(req,res)=>{
     let login = new Login();
     let result = await login.login(req.body);
     
-    console.log(result)
     try {
         if(result){
             response.success = true,
             response.data = result,
             res.status(200).json(response)
         }else {
-            response.data = '',
-            res.status(403).json(response) 
+            response.data = ''
+            res.status(201).json(response) 
         }         
      
     } catch (error) {
         console.log(error);
         response.message = error;
-        res.status(403).json(response) 
+        res.status(201).json(response) 
     }
 }
 

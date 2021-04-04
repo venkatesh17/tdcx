@@ -22,11 +22,17 @@ require('body-parser-xml')(bodyParser);
 
 global.serverUp = new eventEmiter()
 
-app.use(cors())
+app.use(cors()) 
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
 app.use(bodyParser.xml());
+
+app.use((req, res, next) =>{
+  res.header("Access-Control-Allow-Origin", "http://localhost:300");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(bodyParser.xml({
     limit: '10MB',   // Reject payload bigger than 1 MB

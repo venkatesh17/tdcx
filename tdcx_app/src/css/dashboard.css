@@ -69,6 +69,12 @@
 .listoftasks {
     display: inline-flex;
     width: 100%;
+    align-items:baseline;
+}
+
+.listoftasks > * {
+    /* display: block; */
+    margin: 30px 0;
 }
 
 .listoftasks button {

@@ -16,9 +16,7 @@ module.exports = async(req, res)=>{
     let taskdelete = new DeleteTask()
     try {
         let result = await taskdelete.deleteTask(req.params.id);
-
-        console.log("-----------------", result);
-             
+    
         if(result){
             response.success = true;
             response.data = result;
